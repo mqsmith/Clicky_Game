@@ -15,10 +15,18 @@ class App extends Component {
     cardClass: "gameOn"
   };
 
+  
+  checkHighScore = () => {
+    if(this.state.score > this.state.highScore)
+    alert("New High Score!")
+    this.setState({highScore:this.state.score});
+  };
+
   shuffleScoreCard = id => {
     let clickedFriendsIds = this.state.clickedFriendsIds;
 
     if (clickedFriendsIds.includes(id)) {
+      this.checkHighScore();
       this.setState({
         clickedFriendsIds: [],
         message: "Game Over! Click on any of the images to try your luck again!!!!!",
@@ -29,7 +37,8 @@ class App extends Component {
     } else {
       clickedFriendsIds.push(id);
 
-      if (clickedFriendsIds.length === 9) {
+      if (clickedFriendsIds.length === 10) {
+        this.checkHighScore();
         this.setState({
           message: "You Won! Awesome, Click to play again!",
           clickedFriendsIds: []
@@ -41,7 +50,7 @@ class App extends Component {
         friends,
         clickedFriendsIds,
         score: clickedFriendsIds.length,
-        highScore: clickedFriendsIds.length,
+        // highScore: clickedFriendsIds.length,
         message: ""
       });
 
@@ -56,9 +65,10 @@ class App extends Component {
 
     return (
       <>
-      {message ? (<p>{this.state.message}</p>):null}
+      
         <Title score={this.state.score} highScore={this.state.highScore}>
           College Football Pick'em
+          {message ? (<p>{this.state.message}</p>):null}
         </Title>
         <Wrapper>
         {this.state.friends.map(friends => (

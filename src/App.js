@@ -11,7 +11,8 @@ class App extends Component {
     clickedFriendsIds: [],
     score: 0,
     highScore: 0,
-    message: ""
+    message: "",
+    cardClass: "gameOn"
   };
 
   shuffleScoreCard = id => {
@@ -22,8 +23,8 @@ class App extends Component {
         clickedFriendsIds: [],
         message: "Game Over! Click on any of the images to try your luck again!!!!!",
         score: 0,
+        cardClass: "gameOver"
       });
-      console.log(this.state.message);
       return;
     } else {
       clickedFriendsIds.push(id);
@@ -33,7 +34,6 @@ class App extends Component {
           message: "You Won! Awesome, Click to play again!",
           clickedFriendsIds: []
         });
-        alert(this.state.message);
         return;
       }
 
@@ -52,11 +52,15 @@ class App extends Component {
     }
   };
   render() {
+    const message = this.state.message;
+
     return (
-      <Wrapper>
+      <>
+      {message ? (<p>{this.state.message}</p>):null}
         <Title score={this.state.score} highScore={this.state.highScore}>
           College Football Pick'em
         </Title>
+        <Wrapper>
         {this.state.friends.map(friends => (
           <FriendCard
             shuffleScoreCard={this.shuffleScoreCard}
@@ -64,9 +68,12 @@ class App extends Component {
             key={friends.id}
             image={friends.image}
             name={friends.name}
+            className={this.state.cardClass}
           />
         ))}
-      </Wrapper>
+        </Wrapper>
+       
+      </>
     );
   }
 }

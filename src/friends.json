@@ -52,5 +52,12 @@
     "name": "Wisconsin",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Wisconsin_Badgers_logo.svg"
 
+  },
+  {
+    "id": 10,
+    "name": "Auburn",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Auburn_Tigers_logo.svg"
+
   }
+
 ]

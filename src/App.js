@@ -18,9 +18,6 @@ class App extends Component {
     let clickedFriendsIds = this.state.clickedFriendsIds;
 
     if (clickedFriendsIds.includes(id)) {
-      if (this.state.score >= this.state.highScore) {
-        this.setState({ highScore: clickedFriendsIds.length });
-      }
       this.setState({
         clickedFriendsIds: [],
         message: "Game Over! Click on any of the images to try your luck again!!!!!",
@@ -33,9 +30,7 @@ class App extends Component {
 
       if (clickedFriendsIds.length === 9) {
         this.setState({
-          score: 9,
           message: "You Won! Awesome, Click to play again!",
-          highScore: 9,
           clickedFriendsIds: []
         });
         alert(this.state.message);

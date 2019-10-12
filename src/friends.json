@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Alabama",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Alabama_Crimson_Tide_logo.svg"
+    
+  },
+  {
+    "id": 2,
+    "name": "Oklahoma",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/Oklahoma_Sooners_logo.svg"
+    
+  },
+  {
+    "id": 3,
+    "name": "Clemson",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Clemson_Tigers_logo.svg"
+  
+  },
+  {
+    "id": 4,
+    "name": "Florida",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Florida_Gators_script_logo.svg"
+   
+  },
+  {
+    "id": 5,
+    "name": "Georgia Go Dawgs!",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Georgia_Athletics_logo.svg"
+    
+  },
+  {
+    "id": 6,
+    "name": "LSU",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LSU_Athletics_logo.svg"
+   
+  },
+  {
+    "id": 7,
+    "name": "Notre Dame",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Notre_Dame_Fighting_Irish_logo.svg"
+   
+  },
+  {
+    "id": 8,
+    "name": "Ohio State",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Ohio_State_Buckeyes_logo.svg"
+ 
+  },
+  {
+    "id": 9,
+    "name": "Wisconsin",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Wisconsin_Badgers_logo.svg"
+
+  }
+]
